@@ -13,7 +13,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         if (result.status === 'fulfilled') {
           output.push({ status: 'fulfilled', value: result.value });
         } else {
-          output.push({ status: 'rejected', value: result.reason });
+          output.push({ status: 'rejected', value: `Error: ${result.reason}` });
         }
       });
 

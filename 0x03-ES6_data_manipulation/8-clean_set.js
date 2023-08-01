@@ -1,11 +1,11 @@
 export default function cleanSet(set, startString) {
+  const arr = [];
   if (startString.length === 0 || typeof startString !== 'string' || typeof set !== 'object') {
     return '';
   }
 
-  const arr = [];
   set.forEach((value) => {
-    if (value.startsWith(startString)) {
+    if (value && value.startsWith(startString)) {
       arr.push(value.slice(startString.length));
     }
   });
